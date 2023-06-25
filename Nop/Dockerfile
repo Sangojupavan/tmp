@@ -7,6 +7,7 @@ ARG group=nop
 ARG uid=1000
 ARG gid=1000
 RUN apt update && apt install unzip -y
+# Create group nopCommerce
 RUN groupadd -g ${gid} ${group} \
     && useradd -d "$HOME_DIR" -u ${uid} -g ${gid} -m -s /bin/bash ${user}
 USER ${user}
