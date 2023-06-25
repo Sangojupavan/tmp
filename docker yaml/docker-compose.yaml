@@ -1,0 +1,16 @@
+---
+version: '3.9'
+services:
+  web:
+    image: nginx:latest
+    networks:
+      - hello-net
+    volumes:
+      - type: volumes
+        source: my_vol
+        target: /tools
+networks:
+   hello-net:
+     driver: bridge
+volumes:
+  my_vol:
