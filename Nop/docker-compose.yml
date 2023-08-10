@@ -1,4 +1,4 @@
-version: "3.8"
+version: "3.9"
 services:
   nop:
     build:
@@ -11,6 +11,7 @@ services:
 
   nop-db:
     image: mysql:8 
+    container_name: mysql
     networks:
       - nop-nt
     volumes:
@@ -20,15 +21,6 @@ services:
       MYSQL_DATABASE: nop
       MYSQL_ROOT_PASSWORD: pavakumar
       MYSQL_PASSWORD: pavankumar
-      
-
-
-
-    
-  
-
-
-
 volumes:
   nop-db:
 networks:
