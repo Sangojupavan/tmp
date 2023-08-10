@@ -14,7 +14,7 @@ services:
     networks:
       - nop-nt
     volumes:
-      - nop-db:/var/lib/nop-db
+      - nop-db:/var/lib/mysql
     environment:
       MYSQL_USER: pavan
       MYSQL_DATABASE: nop
